@@ -35,16 +35,13 @@ CREATE TABLE SubAccount (
 ```
 
 - It is often necessary to manage fees at the SA level. By default, a fee SA is created.
-- The sum of the amounts in the SAs is always <= to the wallet amount: ** $W_a \geq \sum_{i} (F_a + U_a + SA_i$) **
+- The sum of the amounts in the SAs is always <= to the wallet amount: $W_a \geq \sum_{i} (F_a + U_a + SA_i)$
 
 ## Endpoints
 
 - Create SA: Creates a SA
 - Allocate: Allocates un-allocated amounts to a SA
 - De-allocated: Moves an amount from a SA to U
-
-
-### (Un)Freeze Sub Account
 
 ## Transfer Out Scenario
 - On the UI, the wallet W owner creates an intent for a transfer out and adds the SA id.
