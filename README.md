@@ -9,7 +9,7 @@ Each sub-account acts as a virtual wallet.
 
 ## Naming
 - W stands for Wallet
-- $$W_a$$ is the total amount for W
+- $W_a$ is the total amount for W
 - SA stands for Sub-Account
 - SA_i is the SA at index i, i ranges from 1 to n
 - SA_i_a is the amount allocated for SA_i
