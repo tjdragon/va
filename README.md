@@ -1,5 +1,7 @@
 # Digital Virtual Account Specification
 
+tj@zodia.io
+
 ## Intro
 
 A virtual account is a concept that allows to manage sub-accounts from a main account.  
@@ -12,7 +14,9 @@ Each sub-account acts as a virtual wallet.
 - $W_a$ is the total amount for W
 - SA stands for Sub-Account
 - $SA_i$ is the SA at index i
-- $SA_i,a$ is the amount allocated for SA_i
+- $SA_i,a$ is the amount allocated for $SA_i$
+- F is the fee buffer, also technically a SA
+- U is the un-allocated SA
 
 ## Design
 A SA is implemented in a database, a table that links the W id to the SA id:
@@ -24,7 +28,6 @@ CREATE TABLE SubAccount (
     WalletId varchar(255) NOT NULL,
     SubAccountId varchar(255) NOT NULL,
     SubAccountName varchar(255),
-    Frozen boolean,
     ExternalAddress varchar(255),
     Amount numeric(30),
     PRIMARY KEY(WalletId, SubAccountId)
@@ -32,7 +35,7 @@ CREATE TABLE SubAccount (
 ```
 
 - It is often necessary to manage fees at the SA level. By default, a fee SA is created.
-- The sum of the amounts in the SAs is always <= to the wallet amount.
+- The sum of the amounts in the SAs is always <= to the wallet amount: $S_a \get \sum_{i} F_a + U_a + SA_i$
 
 ## Endpoints
 
