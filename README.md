@@ -35,7 +35,7 @@ CREATE TABLE SubAccount (
 ```
 
 - It is often necessary to manage fees at the SA level. By default, a fee SA is created.
-- The sum of the amounts in the SAs is always <= to the wallet amount: $S_a \get \sum_{i} F_a + U_a + SA_i$
+- The sum of the amounts in the SAs is always <= to the wallet amount: $S_a \geq \sum_{i} (F_a + U_a + SA_i$)
 
 ## Endpoints
 
