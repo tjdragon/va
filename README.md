@@ -11,8 +11,8 @@ Each sub-account acts as a virtual wallet.
 - W stands for Wallet
 - $W_a$ is the total amount for W
 - SA stands for Sub-Account
-- SA_i is the SA at index i, i ranges from 1 to n
-- SA_i_a is the amount allocated for SA_i
+- $SA_i$ is the SA at index i
+- $SA_i,a$ is the amount allocated for SA_i
 
 ## Design
 A SA is implemented in a database, a table that links the W id to the SA id:
