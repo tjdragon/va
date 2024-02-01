@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+actor WALLET_OWNER #green
+control ZODIA #purple
+database BLOCKCHAIN #yellow
+
+autonumber
+
+WALLET_OWNER -> ZODIA: Create Transfer Out\nwith Sub Acc Id
+ZODIA -> ZODIA: Checks Fee Buffer +\nSub Acc Amount
+ZODIA -> BLOCKCHAIN: Sends transaction
+BLOCKCHAIN -> ZODIA: Tx Out Event
+ZODIA -> ZODIA: Subtracts Fee to SA Fee
+ZODIA -> ZODIA: Substracts Amount to SA
+
+@enduml

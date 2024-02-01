@@ -1,0 +1,14 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+actor WALLET_OWNER #green
+control ZODIA #purple
+database BLOCKCHAIN #yellow
+
+autonumber
+
+BLOCKCHAIN -> ZODIA: Transfer In Event
+ZODIA -> ZODIA: BAU
+WALLET_OWNER -> ZODIA: Allocates amount to SA
+
+@enduml
