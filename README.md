@@ -1,5 +1,7 @@
 # Digital Virtual Account Specification
 
+02/02/2024
+
 tj@zodia.io
 
 ## Intro
@@ -56,7 +58,8 @@ CREATE TABLE SubAccount (
 - On the UI, the wallet W owner creates an intent for a transfer out and adds the SA id.
 - If no SA id is provided, it is a BAU process
 - If the amount to transfer out exceeds the SA amount, the intent is rejected.
-- Once the transfer out is successful, W's amount is updated (BAU), and the fee is subtracted from the SA Fee and the amount
+- An overdraft for F is allowed up to x
+- Once the transfer out is successful, W's amount is updated (BAU), and the fee is subtracted from the F and the amount
 subtracted from SA id.
 
 ![Tx Out Flow](./va-tx-out.png)
@@ -75,4 +78,5 @@ Users can download reports
 
 ## Security
 - Actions taken by the user from the website use the website authentication mechanism
+- If required a Maker/Checker process is possible
 - Server side endpoints use the API authentication mechanism
