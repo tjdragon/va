@@ -2,7 +2,7 @@
 
 02/02/2024
 
-tj@zodia.io
+TJ
 
 ## Intro
 
