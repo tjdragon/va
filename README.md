@@ -2,8 +2,6 @@
 
 02/02/2024
 
-TJ
-
 ## Intro
 
 A virtual account is a concept that allows to manage sub-accounts from a main account.  
